@@ -49,7 +49,7 @@ class Dictionary:
         if self.size / self.capacity > self.load_factor:
             self._resize()
 
-    def __getitem__(self, key: Any) -> None:
+    def __getitem__(self, key: Any) -> Any:
         h = hash(key)
         index = h % self.capacity
         bucket = self.table[index]
